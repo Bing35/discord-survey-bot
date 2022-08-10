@@ -1,0 +1,39 @@
+[
+    {
+        "surveyName": "Video games",
+        "questions": [
+            {
+                "question": "What is your name?"
+            },
+            {
+                "question": "What is your favorite game?"
+            },
+            {
+                "question": "What part of your favorite game do you like the most?",
+                "suggestions": [
+					"Gameplay",
+					"Story",
+					"Art",
+					"Music"
+                ],
+                "other": true
+            }
+        ]
+    },
+    {
+        "surveyName": "Movies",
+        "questions":[
+            {
+                "question": "What is your favorite movie genre?",
+				"suggestions":[
+					"Science-Fiction",
+					"Drama",
+					"Action"
+				]
+            },
+            {
+                "question": "What is your favorite movie?"
+            }
+        ]
+    }
+]
