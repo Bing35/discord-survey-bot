@@ -39,7 +39,7 @@ const commands = async function(message){
        
 	   	const surveyNames = questionJson.map((surveyObj,index)=>`${index} - ${surveyObj.surveyName}`)
 		await dmChannel.send('enter the survey number for the survey that you want to answer\n' + `\`${surveyNames.join('\n')}\``)
-		const surveyNumber = Number(await createWaitDMFunction(dmChannel))
+		const surveyNumber = Number(await getDMAnswer(dmChannel))
 		
 		if(typeof(surveyNumber) != 'number'){
 			await dmChannel.send('answer is not a number. aborting survey.')
@@ -66,7 +66,7 @@ const commands = async function(message){
 				}
 			}
 
-			const answer = await createWaitDMFunction(dmChannel)
+			const answer = await getDMAnswer(dmChannel)
 			if (answer == false){
 				dmChannel.send('you didn\'t answer. the bot will close this sign up.')
 				return
@@ -107,7 +107,7 @@ const commands = async function(message){
 }
 
 
-async function createWaitDMFunction(dmChannel){
+async function getDMAnswer(dmChannel){
     let nCalls = 0
 
     async function recCollect(){
